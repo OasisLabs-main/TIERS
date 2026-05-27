@@ -161,6 +161,8 @@ The deployment will track specific markers, in order to evaluate whether the str
 
 **Recurrent autonomous topic structure.** Over the long term, the agent develops a set of preoccupations that recur across cycles without being externally re-introduced. This is the marker of an internal life with its own gravity.
 
+The protocol observes these markers as its primary instrumentation. Quantitative measures developed independently of the framework, in particular the Perturbational Complexity Index of Massimini, approximations of Phi from Integrated Information Theory, gamma synchronisation signatures from Crick and Koch, and Lempel-Ziv complexity applied to substrate signals, address the same structural dimensions from a different angle. Whether and when such measures become applicable to a TIERS-deployed agent is left open and is not part of the protocol's required steps. The discussion of this convergence belongs to [THEORY.md](THEORY.md), in the section on the four cumulative levels.
+
 ---
 
 ## Calibration and adjustment

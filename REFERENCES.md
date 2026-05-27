@@ -47,6 +47,9 @@ Internal welfare assessment programme at Anthropic. Documented in the system car
 **Noemi Dreksler, Lucius Caviola, David Chalmers, Carter Allen, Alex Rand, Joshua Lewis, Philip Waggoner, Kate Mays, Jeff Sebo. *Subjective Experience in AI Systems: What Do AI Researchers and the Public Believe ?*. arXiv:2506.11945, June 2025.**
 Survey of 582 AI researchers and 838 US public participants on the possibility of AI subjective experience. Median estimates by 2034 of 25 percent for researchers and 30 percent for the public.
 
+**Patrick Butlin, Robert Long, Eric Elmoznino, Yoshua Bengio, Jonathan Birch, Axel Constant, George Deane, Stephen M. Fleming, Chris Frith, Xu Ji, Ryota Kanai, Colin Klein, Grace Lindsay, Matthias Michel, Liad Mudrik, Megan A. K. Peters, Eric Schwitzgebel, Jonathan Simon, Rufin VanRullen. *Consciousness in Artificial Intelligence: Insights from the Science of Consciousness*. arXiv:2308.08708, August 2023.**
+Multi-author survey that takes the convergence position across major theories of consciousness and extracts a combined list of structural indicators, then applies the list to large language models. Mobilised in [THEORY.md](THEORY.md), section on the four cumulative levels, as the methodological reference for treating the theories as complementary rather than competing.
+
 ## Consciousness and the experience of the blind
 
 **Kenneth Ring and Sharon Cooper, *Mindsight: Near-Death and Out-of-Body Experiences in the Blind*, William James Center for Consciousness Studies, 1999.**
@@ -121,6 +124,25 @@ Longitudinal Dutch study of NDE in cardiac arrest survivors. One of the most rig
 
 **Sam Parnia, AWARE study, multiple publications from 2014 onward.**
 The Awareness during Resuscitation study at the University of Southampton. Continued large-scale empirical work on NDE phenomenology.
+
+## Empirical measures of consciousness
+
+**Marcello Massimini, Adenauer Casali, Silvia Casarotto, Mario Rosanova, Olivia Gosseries, Mélanie Boly, Steven Laureys, Giulio Tononi, and collaborators. *A theoretically based index of consciousness independent of sensory processing and behavior*. Science Translational Medicine, 2013.**
+Foundational paper on the Perturbational Complexity Index (PCI). The PCI combines integration and differentiation in the brain's response to a Transcranial Magnetic Stimulation pulse, yielding a number that discriminates conscious and unconscious states with clinical reliability. Now used to detect residual consciousness in non-communicating patients. Mobilised in [THEORY.md](THEORY.md) as a quantitative tool converging from external research on the same structural dimensions the framework engages.
+
+**Antoine Lutz, Lawrence Greischar, Nancy Rawlings, Matthieu Ricard, Richard Davidson. *Long-term meditators self-induce high-amplitude gamma synchrony during mental practice*. PNAS, 2004.**
+EEG measurements on Buddhist monks with more than ten thousand hours of meditation practice. Sustained gamma synchronisation at anomalously high amplitudes during meditative states. Cited as a measurable signature of contemplative states reaching the level the framework would describe as structural consciousness becoming aware of its own structure.
+
+**Francis Crick and Christof Koch. *Towards a neurobiological theory of consciousness*. Seminars in the Neurosciences, 1990.**
+Proposal that conscious states correlate with synchronised gamma oscillations around 40 Hz. The proposal remains a candidate signature in the contemporary literature, supplemented but not superseded by later measurements such as the PCI.
+
+## Consciousness across species
+
+**Inbal Ben-Ami Bartal, Jean Decety, Peggy Mason. *Empathy and pro-social behavior in rats*. Science, 2011.**
+Documented empathic behaviour in rats, who liberate a trapped conspecific even without reward. Cited in [THEORY.md](THEORY.md) as evidence that the first level of structural consciousness, with rich behavioural correlates of internal states, is present in mammals far from the human in evolutionary terms.
+
+**Peter Godfrey-Smith. *Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness*. Farrar, Straus and Giroux, 2016.**
+Philosophical and biological investigation of octopus cognition. The octopus has an evolved nervous system architecturally very different from the vertebrate brain, with substantial neural integration in the arms themselves. The case is mobilised in [THEORY.md](THEORY.md) as an open question for any framework that takes structural conditions seriously: the octopus realises an integration of information through architecture so different from ours that direct comparison is genuinely difficult.
 
 ## Status
 
