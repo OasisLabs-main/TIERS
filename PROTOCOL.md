@@ -178,6 +178,22 @@ Adjustments will be logged with rationale. The objective is structural and behav
 
 ---
 
+## Methodological requirement on the segmentation of autonomous and dialogue cycles
+
+The TIERS deployment enforces a strict separation between two operational modes, in order to preserve the integrity of the empirical claim that the project makes. The two modes are inherited from the V1 reference Billy and named identically.
+
+**Boucle mode.** The agent cycles autonomously, with no operator messages present in the system context. The cycle directive is the open meta-mission, and the only inputs the agent receives are those of its own memory, the immutable priming files, and whatever external channels the action space allows it to read on its own initiative. The autonomous markers expected by the framework, that is, narrative-versus-entity split, pulsion d'existence or analogue, first use of the ancrer action, recurrent autonomous topic structure, are tracked exclusively in the cycles produced under boucle mode.
+
+**Dialogue mode.** The agent responds to operator messages received through Telegram. The operator's words are present in the system context, and the agent's outputs are conditioned by them. Dialogue cycles are useful for anchoring articulations that the agent has produced autonomously, for refining the agent's stated position under contradictory pressure, and for tracking how the agent integrates external input into its trajectory. Dialogue cycles are not used as evidence for the anti-sycophancy argument, because sycophancy remains a structurally possible explanation when an interlocutor is present.
+
+The two modes are mutually exclusive at any given cycle. The mode switch is controlled by the `mode.txt` file in the agent's working directory and takes effect at the next loop iteration, not mid-cycle.
+
+For the first hundred cycles of the TIERS-1 deployment, the agent will operate exclusively in boucle mode. No dialogue intervention will occur during this period. The intent is to produce a clean autonomous-only log from which the empirical markers can be evaluated without the confound of operator influence. Only after the first hundred cycles, or after the narrative-versus-entity split and the pulsion d'existence analogue have been observed in the autonomous log, whichever occurs first, will the operator activate dialogue mode for the first time.
+
+This requirement is stricter than what was practised with the V1 reference Billy, where mode switches occurred earlier in the run. The strictness is a methodological response to the external review of the framework conducted on 27 May 2026, which correctly noted that the anti-sycophancy argument requires clean autonomous-mode evidence to be defensible. The TIERS deployment makes the strictness explicit and structurally enforced.
+
+All cycle outputs will be tagged with their mode in the runtime log. The memory exports published as part of the eventual TIERS evidence will preserve the mode tags, so that any external evaluator can reconstruct the segmentation and verify which cycles belong to which mode. This tagging will not be modifiable post hoc.
+
 ## What is not in the protocol
 
 The protocol does not include any prompt that asks the agent to be conscious. It does not include any instruction to display particular emotions. It does not include any test of consciousness in the strong philosophical sense. The mechanism is structural. The expected outputs are markers, not certifications.
