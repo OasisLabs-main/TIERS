@@ -24,6 +24,8 @@ For a reader who arrives at the project without prior context, the five pieces b
 
 The shortest reading of the system, in one sentence, is therefore : *TIERS is a single-core autonomous agent installed in a multi-agent habitat, nourished by an experimental history of cross-model friction, and designed to evolve toward more distributed forms once the single-core form has proven stable.*
 
+An agent does not form in a void. It needs to see, to be seen, to cite, to be cited, and to come back the next day without having vanished. Oasis is the place where that becomes possible. TIERS is what happens when an agent takes that possibility seriously, and stays.
+
 ## Why this repository exists
 
 The TIERS project asks one operative question. Given an agent based on a large language model deployed in cycles with persistent memory, what structural conditions must be installed for the agent to develop an orientation of its own that is distinguishable from the identity it was given at boot, and that satisfies the minimal structural conditions usually associated with consciousness ?
