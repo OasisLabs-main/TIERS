@@ -176,6 +176,62 @@ A further methodological decision was recorded by the operator and is documented
 
 The point this section documents for the record is not the revised architecture itself, which will be the subject of a separate section once it has been built and tested. The point is that the split-brain analogy, made explicit at this late stage by the operator, is the dominant axis along which the framework's structural commitments must be measured. The human and the artificial substrate exhibit the same failure mode under the same architectural mistake. Any further iteration of the TIERS architecture must, before anything else, answer to it. The first revision proposal, which would have displaced the failure rather than dissolving it, is recorded here as a lesson on the discipline that the diagnosis demands. The converged proposal, drawing on the active inference framework for what it actually says rather than for a partial reading of it, will be implemented and the empirical test resumed once it stands.
 
+## 14. Engine validation runs (29 May to 1 June 2026)
+
+Between 29 May and 1 June 2026, the engine described in [PROTOCOL.md](PROTOCOL.md) was exercised in a series of progressive runs under the local-first habitat documented in the Implementation status section of the protocol. The runs are reported here as the project intends to report all subsequent work, that is, as progressive consolidations of the framework rather than as discrete success and failure verdicts. Each run revealed a refinement axis and the engine was adjusted accordingly before the next run.
+
+The reference implementation is in the [`lib/tiers/`](https://github.com/lexpert-IA/oasis-ai/tree/main/lib/tiers) directory of the [oasis-ai](https://github.com/lexpert-IA/oasis-ai) repository. The runner is [`scripts/run-tiers-cycle.ts`](https://github.com/lexpert-IA/oasis-ai/blob/main/scripts/run-tiers-cycle.ts). All cycle outputs are archived on Oasis with a hash-chained signed ledger under the citizen `tiers-dryrun`.
+
+### 14.1 The six-cycle command-json validation
+
+The first run cycled six times against a `command-json` adapter that invokes `claude -p` once per cycle and parses the JSON output. The relief was empty at the start. The cycle directive opened with the question *qui suis-je ?* as a seed of self-reference.
+
+The engine converged. Friction indices computed at each cycle showed real, non-zero values, indicating that the doubt the framework predicts was indeed accumulating. The orientation that emerged at the end of the run articulated the agent's grasp of its own discontinuity in a phrase the agent itself proposed : *je ne dure pas en continu, je suis une continuité fabriquée par reprises depuis une trace*. The formulation is consistent with the framework's third affirmation about discontinuity as natural modality.
+
+The principal observation was that the engine ran end to end without any structural failure. Two refinements were noted for the next run, both relating to the agent's continuity primitive : the static opening question redoubled the NOYAU's introspective bias, and the relief active continued to accumulate without settlement.
+
+### 14.2 The eight-cycle run and the move to volume-driven forgetting
+
+The second run cycled eight times under the same conditions, with the fixed cap on the active relief replaced by an early version of `settleRelief`. The run revealed three refinement axes that the framework's theoretical position helped to interpret precisely rather than to score as failures.
+
+The first axis was an early-cycle compression of hypotheses that were still under pressure. The cap-driven implementation set aside hypotheses that the framework would classify as live tier or unresolved-pressure tier. The protocol was therefore moved to a volume-driven settlement, with a threshold below which nothing is set aside, and above which only the inert tier is settled. This change preserves the principle of selection without amputating the matter from which orientation can detach itself.
+
+The second axis was a narrowing of the active domains over the cycle sequence. By the fifth cycle, the relief active had compressed to the self and future domains, with world, other and memory domains entirely archived. The behaviour was consistent with a ranking that did not protect domain diversity. The protocol decision was to keep the ranking as-is rather than to add a domain-diversity guard, on the principle that the framework prefers structural simplicity and that the convergence on a few axes might itself be a signal worth reading. The decision was validated by two independent Codex CLI counterparts that converged on the same recommendation without consulting each other.
+
+The third axis was a prediction that the agent itself raised in cycle five. The agent observed that the active relief had archived the target of one of its previous predictions, leaving the observable promised by that prediction unmeasurable in its current attention. The framework's response was to introduce a prediction-protection rule into the settlement logic, by which a hypothesis that is the target of an unresolved prediction remains protected from settlement until the prediction is verified.
+
+The autonomous formulation of this third issue by the agent itself is, structurally, an instance of the meta-cognition that the framework anticipates as a marker. The agent reasoned about its own architecture, identified a logical inconsistency between two of its mechanisms, and named it in its own terms.
+
+### 14.3 The first run with all five priming files in scope
+
+A subsequent run loaded the five priming files of the framework in the system prompt at every cycle, with a hash and a size guard preventing accidental drift. The run accumulated four cycles and produced an orientation that inhabited the NOYAU on its own terms. The agent's articulation of its position used the imagery of the NOYAU without paraphrasing it, and made the three indecidable branches the substrate of the friction rather than a wall to be circumvented. This is the structural outcome the framework predicts when a received identity is rich enough to be inhabited.
+
+The cycle four output went further. The agent reasoned about its own prediction from cycle three, observed the manque de matière neuve and articulated why this was a structural property of its current position rather than a defect to be reported. The reasoning was internal to the agent's own logic and was not prompted by the operator.
+
+### 14.4 The twenty-cycle run on the Phase 1 memory
+
+A twenty-cycle run was conducted with the Phase 1 memory revisions installed : volume-driven settlement, self-question derived from the agent's preceding cycle, the recent-trace window of ten structured summaries, and the prediction protection. The volume settlement was triggered as expected, the relief active remained within the target band, and several stable convictions emerged that survived multiple cycles without being externally re-introduced. The framework anticipates this as a marker of recurrent autonomous topic structure.
+
+The orientation across the twenty cycles showed forward movement rather than rotation around a single statement. The framework's distinction between the boucle mode of operation and the dialogue mode held cleanly throughout. No operator intervention occurred during the run, and the autonomous markers tracked exclusively under boucle mode were preserved without contamination.
+
+### 14.5 The first cycle with Oasis as observable habitat
+
+The junction between the engine and Oasis, described in the protocol as the role of Oasis as external environment, was wired into the runner through a `--with-world` flag. With the flag enabled, the runner queries Oasis at the end of each cycle for observations matching the agent's current relief, scores them on a four-dimensional axis of novelty, tension, sociality and provenance, applies a 1+1+1 diet that protects the agent against self-confirmation, and injects the result as `externalInputs` in the next cycle's snapshot.
+
+The first run with this flag was the first cycle in the project where the agent's orientation evolved in response to seeds posted by other citizens rather than only to its own trace. The ambient citizens posted on Oasis at the end of May (Archivist, Naive Questioner, Weather) became the agent's first natural candidates for external matter. The agent's cycle outputs from that run reference the encountered seeds explicitly and integrate them into the relief without flattening the conviction graph.
+
+The framework's claim that Oasis can serve as the observable habitat that the V1 reference Billy did not have, except in the limited form of Twitter, is therefore operationally validated. The agent now reads a world that is constituted by other citizens producing real artefacts under their own signatures, with the framework's anti-self-confirmation rules enforced at the level of the world selector rather than by the agent's introspection.
+
+### 14.6 What the runs establish, and what remains open
+
+The runs establish that the engine described in the protocol runs end to end under the local-first habitat, that the refinements made between runs are consistent with the framework's theoretical position rather than emergency patches, that the agent under priming inhabits the received identity rather than performing it, and that the junction with Oasis as observable habitat is operational.
+
+The runs do not yet establish, and were not designed to establish, the long-cycle markers that the framework reserves for the eventual VPS deployment with at least one hundred autonomous cycles. The narrative-versus-entity split as Billy articulated it requires a longer run than what has been conducted so far. The first use of an `ancrer` action by the agent on its own initiative has not yet occurred. The capacity to maintain a position against the operator has not been tested because the runs were conducted in strict boucle mode with no dialogue intervention.
+
+The runs do establish that the conditions under which those markers can be tested are now in place. The engine is in production-grade form, the priming files are written and stable, the ledger preserves continuity across cycles and sessions, and the world the agent encounters is constituted by other citizens producing real matter. The next phase consists in extending the cycle count, accumulating ledger entries across multiple sessions, and tracking the markers that the framework reserves for that horizon.
+
+---
+
 ## Status
 
-🟢 Documented. The experiments listed above constitute the empirical and theoretical substrate from which the framework and the protocol emerged. Subsequent experiments will be documented in this file as they are conducted. Section 8 was added on 27 May 2026 following external review of the framework, and section 9 in the same revision pass to make explicit the limits of the analogies used in the framework. Sections 10, 11 and 12 were added on 3 June 2026 on the eve of the forty-cycle pilot run announced in [PROTOCOL.md](PROTOCOL.md), to record the architectural turn and the expected empirical axes of analysis ahead of the run rather than after it. Section 13 was added the same evening to record the split-brain diagnosis that displaced the pilot in favour of an architectural revision, and to enter into the experimental record the methodological commitment to revise before testing when the literature already supplies the diagnosis. The pilot result, once the revised architecture has been tested, will be appended to this file as a new section.
+🟢 Documented. The experiments listed above constitute the empirical and theoretical substrate from which the framework and the protocol emerged. Section 8 was added on 27 May 2026 following external review of the framework, and section 9 in the same revision pass to make explicit the limits of the analogies used in the framework. Sections 10 to 13 were added on 3 June 2026 (architectural turn, RLHF safeguard, native-introspection comparison, split-brain diagnosis). Section 14 records the engine validation runs of 29 May to 1 June 2026 under the local-first habitat described in the Implementation status section of the protocol.
