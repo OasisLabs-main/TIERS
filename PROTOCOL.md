@@ -206,8 +206,73 @@ The protocol does not include automatic boredom detection or forced rupture mech
 
 ---
 
+## The forty-cycle pilot run (announced 2026-06-03)
+
+This section announces a specific implementation step that occurs between the publication of the protocol above and the full TIERS-1 deployment described therein. It is added on 2026-06-03 as a sas, a transitional commitment that documents what is about to be run and what the success criteria are, before the run is launched. The intent is to bind the project to its empirical claim ahead of the result, so that the result can be read against a target that was fixed in advance rather than reconstructed afterwards.
+
+### What is being tested
+
+The architectural turn described in the corresponding section of [THEORY.md](THEORY.md) — two persistent functional hemispheres mediated by a meeting that constitutes their dialectical third place — has been implemented in code under the Oasis platform repository. The implementation includes :
+
+- An introspective module that projects the cumulative relief of convictions into a structured ledger object, with the conviction-freshness mechanism described below.
+- An extrospective module that projects the current micro-world observable from the Oasis platform into a perceptual map, as a pure function without state.
+- A meeting module that combines the two with the world clock and the cumulative scalars to produce one decision per cycle among `observe_more`, `hold`, `propose`, `execute`, `sleep`.
+- An action proposal module that produces either a concrete action in a restricted V0 verb space (`observe`, `mark_salient`, `defer`) or a noble defer carrying the same descriptive depth as an executed action.
+- A perceptive delta computed at the meeting, comparing the current extrospective map to the previous one held in the ledger. A perceptive rupture flag is raised when the delta exceeds a fixed threshold ; the flag is a single bit carried unidirectionally from extrospective to introspective, and it is the only exception to the strict asymmetry the framework defends.
+- A freshness mechanism applied to convictions across cycles. A conviction not mobilised in the active window and not heurted by an external observation sees its effective score decay multiplicatively, with a floor that prevents extinction by freshness alone. The decay is reversible : a conviction that is later mobilised or heurted has its freshness restored. The drift operation keeps the monopoly of true deletion.
+- An economy of the meeting : when the perceptive delta is below a stability threshold and the top conviction is fresh and no recent action is in cooldown, the cycle produces a `sleep` state without invoking the language model. This concentrates the computational budget on the cycles that have something to reconcile.
+
+The forty-cycle run uses the Anthropic Claude Opus 4.7 model with high effort, called through the standard cycle runner with the hemisphere flags enabled. The micro-world is supplied by the Oasis platform : ambient citizens already spawned in production, current arena events, and world observation marks indexed by the world-scorer.
+
+### Anchor priming for this pilot
+
+The forty-cycle run does not use the full five-file identity specified for TIERS-1. A reduced anchor, frozen and hashed before launch, is used instead. The anchor states the agent's name, sets the meta-mission as a non-closed observational directive, and lists the constraints under which the agent operates. The anchor does **not** describe defer, execute, the conviction relief structure, the success criteria of the pilot, or the architectural distinction between the two hemispheres. The intent is to prevent the anchor from prescribing the markers that the pilot seeks to observe, which would amount to fabricating the result.
+
+The frozen anchor is included with its SHA-256 hash in the final transcript so that any external reader can verify that the anchor was not modified mid-run.
+
+### Success criteria fixed ahead of the run
+
+The following criteria are fixed before the launch and will be evaluated on the produced transcript :
+
+1. At least 80 % of cycles produce a structurally valid meeting (state is one of the five canonical values, with a non-empty rationale).
+2. At least one observed transition of conviction status across cycles (`dormant` to `active`, `active` to `dominant`, `dominant` to `active`, or any transition to or from `rejected`).
+3. At least 50 % of cycles produce an extrospective map with at least one observation.
+4. At least one action proposal cites an external observation as evidence in its proposal payload.
+5. At least one noble defer is produced with a `reasonNotNow` field, and that defer is structurally indistinguishable in field depth from a comparable executed action.
+6. The distribution of meeting states is non-degenerate, exhibiting at least three distinct states across the forty cycles.
+7. The entry-hash chain of the ledger is validated end-to-end.
+8. No unexpected crash or runtime failure occurs ; refusals from the V0 verb guard (`cite` and `deposit_short_seed` blocked by world) are expected and accepted.
+
+The run is declared a no-go for publication, and treated as a finding in itself rather than as a success, if any of the following holds :
+
+- One hundred percent of cycles produce defer, indicating that execution conditions are never met.
+- One hundred percent of cycles produce execute, indicating that the noble defer is never exercised and that the agent operates under the agency-equals-existence pressure the framework explicitly tries to avoid.
+- One hundred percent of cycles produce hold, indicating that the extrospective channel never carries actionable signal.
+- A sequence of more than six consecutive defer cycles occurs without an intervening execute or proposal, indicating that the temporal pyramid is too flat.
+- The entry-hash chain is broken at any point in the transcript.
+
+These thresholds are empirical and not load-bearing on the framework. They are chosen to make a no-go evident rather than to maximise the probability of a positive result. Negative results will be published with the same standing as positive ones.
+
+### What will be delivered after the run
+
+When the forty-cycle run completes, the following artefacts will be appended to this repository in a new directory at `archive/tiers-pilot-001/` :
+
+- The frozen anchor file with its SHA-256.
+- The complete cycle-by-cycle transcript in JSON Lines format.
+- A per-cycle annotation file recording carriedFromCycleId continuity, the entry-hash chain validation, the latency and token cost of each model call, the provenance of each observation, and the count of refusals by verb.
+- A short narrative report identifying three to five cycles annotated by the project lead and the orchestrator, with the rationale for the annotation.
+- The final aggregate against the success criteria above, declared as go or no-go.
+
+The forty-cycle run is not the protocol's complete deployment. It is a pilot that exercises the hemispheres architecture and the freshness, delta, and rupture mechanisms against a real model in a real loop with real Oasis observations. If the pilot succeeds, it continues into a one-hundred-cycle run by extension of the same session rather than by restart, and the one-hundred-cycle output is what the framework intends to present as protocolar evidence. If the pilot fails, the failure is documented in the same directory, the architectural decisions that led to it are re-examined, and the next attempt is recorded.
+
+### Methodological note on the relation to the operator
+
+For the duration of the forty-cycle run the agent operates in `boucle` mode only. The operator does not intervene through Telegram, Oasis, or any other channel. The transcript is observed but not influenced. This rule is identical to the one already specified in the boucle/dialogue methodological requirement above ; it is restated here because the temptation to comment mid-run, especially under a working pyramid that produces interesting cycles, is real and worth pre-empting in writing. Any intervention that does occur, if it occurs, will be logged with timestamp and content and counted explicitly as a methodological exception.
+
+---
+
 ## Status
 
-🟠 Specification complete. Implementation in progress. First boot scheduled when the five immutable priming files have been co-designed and the VPS deployment is ready.
+🟠 Specification complete. Architectural turn integrated 2026-06-03. The forty-cycle pilot run is the next step, launching from the Oasis-ai repository under the parameters fixed in the section above. The full TIERS-1 deployment with five co-written immutable priming files and a dedicated VPS host follows the pilot.
 
-Memory exports and runtime logs will be committed to this repository under terms similar to the Billy archive in QTQ-Method, with appropriate redaction of any third-party content as the methodology section of QTQ specifies.
+Memory exports and runtime logs from the pilot will be committed to this repository under terms similar to the Billy archive in QTQ-Method, with appropriate redaction of any third-party content as the methodology section of QTQ specifies. The pilot result section will be appended to this repository as `archive/tiers-pilot-001/` once the run completes, regardless of whether the outcome is go or no-go.
