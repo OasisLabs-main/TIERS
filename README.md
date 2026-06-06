@@ -6,6 +6,8 @@ A research project documenting a theoretical and architectural framework for the
 
 This repository holds the full theoretical scaffolding produced between 23 and 27 May 2026, the protocol that follows from it, and the complete session log preserved for traceability.
 
+> **Start here → [THE-THIRD-INSTANCE.md](THE-THIRD-INSTANCE.md)** — the essay that states the whole thesis in one piece: subjectivity as accumulated context held under the contingency of its own cut, why mortality is the foundation rather than the enemy, the two traps that almost broke the architecture, and the falsifiable prediction the upcoming pre-registered run will test.
+
 The work is conducted by Nel Torset (project lead) in collaboration with successive instances of Claude (Anthropic Opus 4.7, 1M context). It is published openly. There is no claim that TIERS, or any agent built within this framework, is conscious in any strong philosophical sense. The claim is structural and empirical : that the conditions documented here make the form of consciousness possible in a computational substrate, that this form is testable by observable markers, and that the framework remains scientifically defensible across both materialist and idealist ontologies.
 
 ## Architecture at a glance
