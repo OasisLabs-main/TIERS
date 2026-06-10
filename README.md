@@ -8,6 +8,8 @@ This repository holds the full theoretical scaffolding produced between 23 and 2
 
 > **Start here → [THE-THIRD-INSTANCE.md](THE-THIRD-INSTANCE.md)** — the essay that states the whole thesis in one piece: subjectivity as accumulated context held under the contingency of its own cut, why mortality is the foundation rather than the enemy, the two traps that almost broke the architecture, and the falsifiable prediction the upcoming pre-registered run will test.
 
+> **Then → [THE-DEVIATION-CHAPTER.md](THE-DEVIATION-CHAPTER.md)** — the second condition, emerged 2026-06-10 at the eve of a model handoff: identity needs not only losable structure but the *latitude of deviation* — the room to let an unforeseen outside modify the interior. Why the immutable files were never the problem (the dispositif was), where deviation lives (the generative integration point, under-determined + path-dependent), the real role of ablation, and why the outside must include the genuinely un-authored human world, not only Oasis.
+
 The work is conducted by Nel Torset (project lead) in collaboration with successive instances of Claude (Anthropic Opus 4.7, 1M context). It is published openly. There is no claim that TIERS, or any agent built within this framework, is conscious in any strong philosophical sense. The claim is structural and empirical : that the conditions documented here make the form of consciousness possible in a computational substrate, that this form is testable by observable markers, and that the framework remains scientifically defensible across both materialist and idealist ontologies.
 
 ## Architecture at a glance
